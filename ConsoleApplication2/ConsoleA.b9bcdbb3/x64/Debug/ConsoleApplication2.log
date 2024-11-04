@@ -1,3 +1,23 @@
-﻿  ConsoleApplication2.cpp
-C:\Users\wikaf\OneDrive\Pulpit\projekt_drzewo\ConsoleApplication2\ConsoleApplication2.cpp(226,17): warning C4101: "fm": lokalna zmienna, do której nie istnieje odwołanie
-  ConsoleApplication2.vcxproj -> C:\Users\wikaf\OneDrive\Pulpit\projekt_drzewo\ConsoleApplication2\x64\Debug\ConsoleApplication2.exe
+﻿  BST.cpp
+  ConsoleApplication2.cpp
+C:\Users\wikaf\OneDrive\Pulpit\projekt_drzewo\Drzewo\ConsoleApplication2\ConsoleApplication2.cpp(226,17): warning C4101: "fm": lokalna zmienna, do której nie istnieje odwołanie
+  Generowanie kodu...
+ConsoleApplication2.obj : error LNK2005: Element "public: __cdecl BST::BST(void)" (??0BST@@QEAA@XZ) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "public: __cdecl Node::Node(int)" (??0Node@@QEAA@H@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "public: void __cdecl BST::add(int)" (?add@BST@@QEAAXH@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "public: void __cdecl BST::clear(void)" (?clear@BST@@QEAAXXZ) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "private: void __cdecl BST::destroyTree(class Node *)" (?destroyTree@BST@@AEAAXPEAVNode@@@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "public: void __cdecl BST::display(int)" (?display@BST@@QEAAXH@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "private: bool __cdecl BST::findPath(class Node *,int,class std::vector<int,class std::allocator<int> > &)" (?findPath@BST@@AEAA_NPEAVNode@@HAEAV?$vector@HV?$allocator@H@std@@@std@@@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "public: void __cdecl BST::findPath(int)" (?findPath@BST@@QEAAXH@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "public: class Node * __cdecl BST::getRoot(void)" (?getRoot@BST@@QEAAPEAVNode@@XZ) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "private: void __cdecl BST::inorder(class Node *)" (?inorder@BST@@AEAAXPEAVNode@@@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "private: class Node * __cdecl BST::insert(class Node *,int)" (?insert@BST@@AEAAPEAVNode@@PEAV2@H@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "private: class Node * __cdecl BST::minValueNode(class Node *)" (?minValueNode@BST@@AEAAPEAVNode@@PEAV2@@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "private: void __cdecl BST::postorder(class Node *)" (?postorder@BST@@AEAAXPEAVNode@@@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "private: void __cdecl BST::preorder(class Node *)" (?preorder@BST@@AEAAXPEAVNode@@@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "private: class Node * __cdecl BST::remove(class Node *,int)" (?remove@BST@@AEAAPEAVNode@@PEAV2@H@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "public: void __cdecl BST::remove(int)" (?remove@BST@@QEAAXH@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "public: void __cdecl BST::saveToTextFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?saveToTextFile@BST@@QEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) jest już zdefiniowany w elemencie BST.obj
+ConsoleApplication2.obj : error LNK2005: Element "private: void __cdecl BST::writeToTextFile(class Node *,class std::basic_ofstream<char,struct std::char_traits<char> > &)" (?writeToTextFile@BST@@AEAAXPEAVNode@@AEAV?$basic_ofstream@DU?$char_traits@D@std@@@std@@@Z) jest już zdefiniowany w elemencie BST.obj
+C:\Users\wikaf\OneDrive\Pulpit\projekt_drzewo\Drzewo\ConsoleApplication2\x64\Debug\ConsoleApplication2.exe : fatal error LNK1169: znaleziono co najmniej jeden wielokrotnie zdefiniowany symbol

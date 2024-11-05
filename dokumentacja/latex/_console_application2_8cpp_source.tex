@@ -1,0 +1,107 @@
+\doxysection{Console\+Application2.\+cpp}
+\hypertarget{_console_application2_8cpp_source}{}\label{_console_application2_8cpp_source}\index{ConsoleApplication2/ConsoleApplication2.cpp@{ConsoleApplication2/ConsoleApplication2.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}BST.h"{}}}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}FileManager.h"{}}}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00006}00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00015}00015\ \textcolor{keywordtype}{void}\ wyswietlMenu()\ \{}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00016}00016\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nMenu:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00017}00017\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}1.\ Dodaj\ element\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00018}00018\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}2.\ Usun\ element\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00019}00019\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}3.\ Wyczysc\ drzewo\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00020}00020\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}4.\ Znajdz\ sciezke\ do\ elementu\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00021}00021\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}5.\ Wyswietl\ drzewo\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00022}00022\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}6.\ Zapisz\ drzewo\ do\ pliku\ tekstowego\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00023}00023\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}7.\ Wczytaj\ drzewo\ z\ pliku\ tekstowego\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00024}00024\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}8.\ Zapisz\ drzewo\ do\ pliku\ binarnego\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00025}00025\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}9.\ Wczytaj\ drzewo\ z\ pliku\ binarnego\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00026}00026\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}0.\ Wyjdz\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00027}00027\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Wybierz\ opcje:\ "{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00038}00038\ \textcolor{keywordtype}{int}\ main()\ \{}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{class_b_s_t}{BST}}\ bst;\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{int}\ wybor;\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{int}\ wartosc;\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{int}\ trybWyswietlania;\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{string}\ nazwaPliku;\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ Petla\ glowna\ programu\ pozwalajaca\ na\ wielokrotne\ wykonywanie\ operacji\ na\ drzewie}}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ wyswietlMenu();}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ cin\ >>\ wybor;}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (wybor)\ \{}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Podaj\ wartosc\ do\ dodania:\ "{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ wartosc;}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ bst.\mbox{\hyperlink{class_b_s_t_a82af956aafe99b4eba3cf68662d2f43c}{add}}(wartosc);\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Dodano\ element.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Podaj\ wartosc\ do\ usuniecia:\ "{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ wartosc;}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ bst.remove(wartosc);\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Usunieto\ element.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ bst.\mbox{\hyperlink{class_b_s_t_ac4c25c29469df59a243c920423ed6d75}{clear}}();\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Drzewo\ wyczyszczone.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Podaj\ wartosc\ do\ znalezienia\ sciezki:\ "{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ wartosc;}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ bst.findPath(wartosc);\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Tryb\ wyswietlania\ (1:\ Preorder,\ 2:\ Inorder,\ 3:\ Postorder):\ "{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ trybWyswietlania;}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ bst.\mbox{\hyperlink{class_b_s_t_a432f8052da4e1446dce39b046e05b607}{display}}(trybWyswietlania);\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Podaj\ nazwe\ pliku\ do\ zapisu\ (tekst):\ "{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ nazwaPliku;}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_file_manager_a1ed08d8fc6bcff754bdde043b056a852}{FileManager::zapiszTxt}}(nazwaPliku,\ bst.\mbox{\hyperlink{class_b_s_t_a94f670c9792629f6e4d95790a0c83792}{getRoot}}());\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Podaj\ nazwe\ pliku\ do\ wczytania\ (tekst):\ "{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ nazwaPliku;}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_file_manager_ac45e95a07fd01cbeadcb3a2fb58126a6}{FileManager::wczytajTxt}}(nazwaPliku,\ bst);\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Podaj\ nazwe\ pliku\ do\ zapisu\ (binarny):\ "{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ nazwaPliku;}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_file_manager_af827d13678e9d642c2d0b5b39bb16474}{FileManager::zapiszBin}}(nazwaPliku,\ bst.\mbox{\hyperlink{class_b_s_t_a94f670c9792629f6e4d95790a0c83792}{getRoot}}());\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 9:}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Podaj\ nazwe\ pliku\ do\ wczytania\ (binarny):\ "{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ nazwaPliku;}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_file_manager_a81a76eb6d28e338475e811da966c871c}{FileManager::wczytajBin}}(nazwaPliku,\ bst);\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Koniec\ programu.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Niepoprawna\ opcja.\ Sprobuj\ ponownie.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00114}00114\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00115}00115\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_console_application2_8cpp_source_l00116}00116\ \}}
+
+\end{DoxyCode}

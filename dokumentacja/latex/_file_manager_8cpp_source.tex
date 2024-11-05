@@ -1,0 +1,81 @@
+\doxysection{File\+Manager.\+cpp}
+\hypertarget{_file_manager_8cpp_source}{}\label{_file_manager_8cpp_source}\index{ConsoleApplication2/FileManager.cpp@{ConsoleApplication2/FileManager.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}FileManager.h"{}}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00005}00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00015}00015\ \textcolor{keywordtype}{void}\ FileManager::zapiszBinHelp(ofstream\&\ plik,\ \mbox{\hyperlink{class_node}{Node}}*\ node)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{if}\ (!node)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00017}00017\ \ \ \ \ plik.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&node-\/>\mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}}),\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00018}00018\ \ \ \ \ zapiszBinHelp(plik,\ node-\/>\mbox{\hyperlink{class_node_ab8c667ac8fdb120ed4c031682a9cdaee}{left}});}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00019}00019\ \ \ \ \ zapiszBinHelp(plik,\ node-\/>\mbox{\hyperlink{class_node_a7328862eaa6dea28018326549b3294d3}{right}});}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00030}00030\ \textcolor{keywordtype}{void}\ FileManager::zapiszTxtHelp(ofstream\&\ plik,\ \mbox{\hyperlink{class_node}{Node}}*\ node)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{if}\ (!node)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00032}00032\ \ \ \ \ plik\ <<\ node-\/>\mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}}\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00033}00033\ \ \ \ \ zapiszTxtHelp(plik,\ node-\/>\mbox{\hyperlink{class_node_ab8c667ac8fdb120ed4c031682a9cdaee}{left}});}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00034}00034\ \ \ \ \ zapiszTxtHelp(plik,\ node-\/>\mbox{\hyperlink{class_node_a7328862eaa6dea28018326549b3294d3}{right}});}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00043}\mbox{\hyperlink{class_file_manager_af827d13678e9d642c2d0b5b39bb16474}{00043}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_file_manager_af827d13678e9d642c2d0b5b39bb16474}{FileManager::zapiszBin}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ nazwaPliku,\ \mbox{\hyperlink{class_node}{Node}}*\ root)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00044}00044\ \ \ \ \ ofstream\ plik(nazwaPliku,\ ios::binary);}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (plik.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ zapiszBinHelp(plik,\ root);}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ plik.close();}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Zapisano\ drzewo\ do\ pliku\ binarnego.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Blad\ otwarcia\ pliku\ binarnego.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00063}\mbox{\hyperlink{class_file_manager_a81a76eb6d28e338475e811da966c871c}{00063}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_file_manager_a81a76eb6d28e338475e811da966c871c}{FileManager::wczytajBin}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ nazwaPliku,\ \mbox{\hyperlink{class_b_s_t}{BST}}\&\ bst)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00064}00064\ \ \ \ \ ifstream\ plik(nazwaPliku,\ ios::binary);}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{if}\ (plik.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ wartosc;}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ bst.\mbox{\hyperlink{class_b_s_t_ac4c25c29469df59a243c920423ed6d75}{clear}}();}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (plik.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&wartosc),\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})))\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ bst.\mbox{\hyperlink{class_b_s_t_a82af956aafe99b4eba3cf68662d2f43c}{add}}(wartosc);}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ plik.close();}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Wczytano\ drzewo\ z\ pliku\ binarnego.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00074}00074\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Blad\ otwarcia\ pliku\ binarnego.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00077}00077\ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00085}\mbox{\hyperlink{class_file_manager_a1ed08d8fc6bcff754bdde043b056a852}{00085}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_file_manager_a1ed08d8fc6bcff754bdde043b056a852}{FileManager::zapiszTxt}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ nazwaPliku,\ \mbox{\hyperlink{class_node}{Node}}*\ root)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00086}00086\ \ \ \ \ ofstream\ plik(nazwaPliku);}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{if}\ (plik.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ zapiszTxtHelp(plik,\ root);}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ plik.close();}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Drzewo\ zapisano\ do\ pliku\ tekstowego.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Blad\ otwarcia\ pliku.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00095}00095\ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00105}\mbox{\hyperlink{class_file_manager_ac45e95a07fd01cbeadcb3a2fb58126a6}{00105}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_file_manager_ac45e95a07fd01cbeadcb3a2fb58126a6}{FileManager::wczytajTxt}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ nazwaPliku,\ \mbox{\hyperlink{class_b_s_t}{BST}}\&\ bst)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00106}00106\ \ \ \ \ ifstream\ plik(nazwaPliku);}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00107}00107\ \ \ \ \ \textcolor{keywordflow}{if}\ (plik.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ wartosc;}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ bst.\mbox{\hyperlink{class_b_s_t_ac4c25c29469df59a243c920423ed6d75}{clear}}();}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (plik\ >>\ wartosc)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ bst.\mbox{\hyperlink{class_b_s_t_a82af956aafe99b4eba3cf68662d2f43c}{add}}(wartosc);}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ plik.close();}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Wczytano\ drzewo\ z\ pliku\ tekstowego.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00116}00116\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Blad\ otwarcia\ pliku\ tekstowego.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00118}00118\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_manager_8cpp_source_l00119}00119\ \}}
+
+\end{DoxyCode}

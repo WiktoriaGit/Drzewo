@@ -1,0 +1,142 @@
+\doxysection{File\+Manager Class Reference}
+\hypertarget{class_file_manager}{}\label{class_file_manager}\index{FileManager@{FileManager}}
+
+
+Klasa \doxylink{class_file_manager}{File\+Manager} obsluguje zapisywanie i wczytywanie drzewa \doxylink{class_b_s_t}{BST} z plikow binarnych i tekstowych.  
+
+
+
+
+{\ttfamily \#include $<$File\+Manager.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_file_manager_af827d13678e9d642c2d0b5b39bb16474}{zapisz\+Bin}} (const std\+::string \&nazwa\+Pliku, \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}root)
+\begin{DoxyCompactList}\small\item\em Zapisuje drzewo \doxylink{class_b_s_t}{BST} do pliku binarnego. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_file_manager_a81a76eb6d28e338475e811da966c871c}{wczytaj\+Bin}} (const std\+::string \&nazwa\+Pliku, \mbox{\hyperlink{class_b_s_t}{BST}} \&bst)
+\begin{DoxyCompactList}\small\item\em Wczytuje drzewo \doxylink{class_b_s_t}{BST} z pliku binarnego. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_file_manager_ac45e95a07fd01cbeadcb3a2fb58126a6}{wczytaj\+Txt}} (const std\+::string \&nazwa\+Pliku, \mbox{\hyperlink{class_b_s_t}{BST}} \&bst)
+\begin{DoxyCompactList}\small\item\em Wczytuje drzewo \doxylink{class_b_s_t}{BST} z pliku tekstowego. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_file_manager_a1ed08d8fc6bcff754bdde043b056a852}{zapisz\+Txt}} (const std\+::string \&nazwa\+Pliku, \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}root)
+\begin{DoxyCompactList}\small\item\em Zapisuje drzewo \doxylink{class_b_s_t}{BST} do pliku tekstowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa \doxylink{class_file_manager}{File\+Manager} obsluguje zapisywanie i wczytywanie drzewa \doxylink{class_b_s_t}{BST} z plikow binarnych i tekstowych. 
+
+Klasa zawiera metody do zapisu i odczytu drzewa \doxylink{class_b_s_t}{BST} w formacie binarnym oraz tekstowym, wykorzystujac pomocnicze funkcje rekurencyjne. 
+
+Definition at line \mbox{\hyperlink{_file_manager_8h_source_l00014}{14}} of file \mbox{\hyperlink{_file_manager_8h_source}{File\+Manager.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_file_manager_a81a76eb6d28e338475e811da966c871c}\index{FileManager@{FileManager}!wczytajBin@{wczytajBin}}
+\index{wczytajBin@{wczytajBin}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{wczytajBin()}{wczytajBin()}}
+{\footnotesize\ttfamily \label{class_file_manager_a81a76eb6d28e338475e811da966c871c} 
+void File\+Manager\+::wczytaj\+Bin (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nazwa\+Pliku}{, }\item[{\mbox{\hyperlink{class_b_s_t}{BST}} \&}]{bst}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Wczytuje drzewo \doxylink{class_b_s_t}{BST} z pliku binarnego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nazwa\+Pliku} & Nazwa pliku, z ktorego wczytujemy drzewo. \\
+\hline
+{\em bst} & Obiekt drzewa \doxylink{class_b_s_t}{BST}, do ktorego dodajemy wczytane wartosci.\\
+\hline
+\end{DoxyParams}
+Funkcja odczytuje kazda wartosc z pliku binarnego i dodaje ja do drzewa \doxylink{class_b_s_t}{BST}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nazwa\+Pliku} & Nazwa pliku, z ktorego wczytujemy drzewo. \\
+\hline
+{\em bst} & Obiekt drzewa \doxylink{class_b_s_t}{BST}, do ktorego dodajemy wartosci. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_file_manager_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{_file_manager_8cpp_source}{File\+Manager.\+cpp}}.
+
+\Hypertarget{class_file_manager_ac45e95a07fd01cbeadcb3a2fb58126a6}\index{FileManager@{FileManager}!wczytajTxt@{wczytajTxt}}
+\index{wczytajTxt@{wczytajTxt}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{wczytajTxt()}{wczytajTxt()}}
+{\footnotesize\ttfamily \label{class_file_manager_ac45e95a07fd01cbeadcb3a2fb58126a6} 
+void File\+Manager\+::wczytaj\+Txt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nazwa\+Pliku}{, }\item[{\mbox{\hyperlink{class_b_s_t}{BST}} \&}]{bst}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Wczytuje drzewo \doxylink{class_b_s_t}{BST} z pliku tekstowego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nazwa\+Pliku} & Nazwa pliku, z ktorego wczytujemy drzewo. \\
+\hline
+{\em bst} & Obiekt drzewa \doxylink{class_b_s_t}{BST}, do ktorego dodajemy wczytane wartosci.\\
+\hline
+\end{DoxyParams}
+Funkcja odczytuje kazda wartosc z pliku tekstowego i dodaje ja do drzewa \doxylink{class_b_s_t}{BST}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nazwa\+Pliku} & Nazwa pliku, z ktorego wczytujemy drzewo. \\
+\hline
+{\em bst} & Obiekt drzewa \doxylink{class_b_s_t}{BST}, do ktorego dodajemy wartosci. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_file_manager_8cpp_source_l00105}{105}} of file \mbox{\hyperlink{_file_manager_8cpp_source}{File\+Manager.\+cpp}}.
+
+\Hypertarget{class_file_manager_af827d13678e9d642c2d0b5b39bb16474}\index{FileManager@{FileManager}!zapiszBin@{zapiszBin}}
+\index{zapiszBin@{zapiszBin}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{zapiszBin()}{zapiszBin()}}
+{\footnotesize\ttfamily \label{class_file_manager_af827d13678e9d642c2d0b5b39bb16474} 
+void File\+Manager\+::zapisz\+Bin (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nazwa\+Pliku}{, }\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{root}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Zapisuje drzewo \doxylink{class_b_s_t}{BST} do pliku binarnego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nazwa\+Pliku} & Nazwa pliku, do ktorego zapisujemy drzewo. \\
+\hline
+{\em root} & Wskaznik na korzen drzewa \doxylink{class_b_s_t}{BST}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_file_manager_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{_file_manager_8cpp_source}{File\+Manager.\+cpp}}.
+
+\Hypertarget{class_file_manager_a1ed08d8fc6bcff754bdde043b056a852}\index{FileManager@{FileManager}!zapiszTxt@{zapiszTxt}}
+\index{zapiszTxt@{zapiszTxt}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{zapiszTxt()}{zapiszTxt()}}
+{\footnotesize\ttfamily \label{class_file_manager_a1ed08d8fc6bcff754bdde043b056a852} 
+void File\+Manager\+::zapisz\+Txt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nazwa\+Pliku}{, }\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{root}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Zapisuje drzewo \doxylink{class_b_s_t}{BST} do pliku tekstowego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nazwa\+Pliku} & Nazwa pliku, do ktorego zapisujemy drzewo. \\
+\hline
+{\em root} & Wskaznik na korzen drzewa \doxylink{class_b_s_t}{BST}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_file_manager_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{_file_manager_8cpp_source}{File\+Manager.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Console\+Application2/File\+Manager.\+h\item 
+Console\+Application2/File\+Manager.\+cpp\end{DoxyCompactItemize}

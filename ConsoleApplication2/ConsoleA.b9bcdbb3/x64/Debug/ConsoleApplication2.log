@@ -2,4 +2,5 @@
   ConsoleApplication2.cpp
   FileManager.cpp
   Generowanie kodu...
-  ConsoleApplication2.vcxproj -> C:\Users\gagab\Desktop\Drzewo\ConsoleApplication2\x64\Debug\ConsoleApplication2.exe
+  LINK : nie znaleziono elementu C:\Users\wikaf\OneDrive\Pulpit\Drzewo-main\ConsoleApplication2\x64\Debug\ConsoleApplication2.exe ani nie został on skompilowany podczas ostatniego konsolidowania przyrostowego; zostanie wykonana pełna konsolidacja
+  ConsoleApplication2.vcxproj -> C:\Users\wikaf\OneDrive\Pulpit\Drzewo-main\ConsoleApplication2\x64\Debug\ConsoleApplication2.exe

@@ -92,7 +92,7 @@ void FileManager::zapiszTxt(const string& nazwaPliku, Node* root) {
     else {
         cout << "Blad otwarcia pliku.\n";
     }
-}
+}   
 
 /**
  * @brief Wczytuje drzewo BST z pliku tekstowego.

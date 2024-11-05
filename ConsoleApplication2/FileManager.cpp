@@ -33,7 +33,7 @@ void FileManager::zapiszTxtHelp(ofstream& plik, Node* node) {
     zapiszTxtHelp(plik, node->left);
     zapiszTxtHelp(plik, node->right);
 }
-     
+       
 /**
  * @brief Zapisuje drzewo BST do pliku binarnego.
  *
@@ -75,6 +75,8 @@ void FileManager::wczytajBin(const string& nazwaPliku, BST& bst) {
         cout << "Blad otwarcia pliku binarnego.\n";
     }
 }
+
+//tescik
 
    
 /**   

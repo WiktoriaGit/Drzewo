@@ -109,7 +109,7 @@ void FileManager::wczytajTxt(const string& nazwaPliku, BST& bst) {
         bst.clear();
         while (plik >> wartosc) {
             bst.add(wartosc);
-        }
+        }   
         plik.close();
         cout << "Wczytano drzewo z pliku tekstowego.\n";
     }

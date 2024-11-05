@@ -1,32 +1,76 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# Pliki kompilacji i obiektów
 *.o
 *.obj
+*.lo
+*.slo
+*.Plo
 
-# Precompiled Headers
-*.gch
-*.pch
+# Pliki wykonywalne
+*.exe
+*.out
+*.app
+*.dSYM/
+*.stackdump
 
-# Compiled Dynamic libraries
+# Pliki bibliotek dynamicznych
 *.so
 *.dylib
 *.dll
 
-# Fortran module files
-*.mod
-*.smod
+# Pliki CMake i make
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# Pliki generowane przez IDE (Visual Studio, CLion, Xcode itp.)
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.ncb
+*.suo
+*.user
+*.userosscache
+*.sdf
+*.opensdf
+*.tlog/
+*.lastbuildstate
 
-# Executables
-*.exe
-*.out
-*.app
+.idea/
+*.iml
+*.idb
+*.pdb
+
+# Katalogi testów i build
+/build/
+/bin/
+/lib/
+/Debug/
+/Release/
+/x64/
+/x86/
+
+# Pliki logów i konfiguracji środowiska
+*.log
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Pliki cache
+*.cache
+*.pyc
+*.pyo
+*.tmp
+*.bak
+
+# Dokumentacja generowana (Doxygen)
+doc/
+*.dox
+
+# Inne niepotrzebne
+*.gch
+*.swp
+*.orig
+*.rej
+*.bak

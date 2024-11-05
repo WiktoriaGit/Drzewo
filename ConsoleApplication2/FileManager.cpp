@@ -4,57 +4,116 @@
 
 using namespace std;
 
-// Funkcja pomocnicza do zapisu drzewa w formacie binarnym (rekurencyjnie)
-void FileManager::saveBinaryHelper(ofstream& file, Node* node) {
+/**
+ * @brief Funkcja pomocnicza do rekurencyjnego zapisu drzewa w formacie binarnym.
+ *
+ * Funkcja zapisuje wartosc wezla, a nastepnie rekurencyjnie zapisuje lewe i prawe poddrzewo.
+ *
+ * @param plik Strumien wyjsciowy binarny do zapisu.
+ * @param node Wskaznik na obecny wezel drzewa.
+ */
+void FileManager::zapiszBinHelp(ofstream& plik, Node* node) {
     if (!node) return;
-    file.write(reinterpret_cast<char*>(&node->data), sizeof(int)); // zapisuje wartoœæ wêz³a
-    saveBinaryHelper(file, node->left);    // zapis lewej ga³êzi
-    saveBinaryHelper(file, node->right);   // zapis prawej ga³êzi
+    plik.write(reinterpret_cast<char*>(&node->data), sizeof(int));
+    zapiszBinHelp(plik, node->left);
+    zapiszBinHelp(plik, node->right);
 }
 
-// Funkcja zapisuj¹ca drzewo do pliku binarnego
-void FileManager::saveToBinaryFile(const string& filename, Node* root) {
-    ofstream file(filename, ios::binary);
-    if (file.is_open()) {
-        saveBinaryHelper(file, root);
-        file.close();
-        cout << "Tree saved to binary file.\n";
+/**
+ * @brief Funkcja pomocnicza do rekurencyjnego zapisu drzewa w formacie tekstowym.
+ *
+ * Funkcja zapisuje wartosc wezla do pliku tekstowego, a nastepnie rekurencyjnie zapisuje lewe i prawe poddrzewo.
+ *
+ * @param plik Strumien wyjsciowy tekstowy do zapisu.
+ * @param node Wskaznik na obecny wezel drzewa.
+ */
+void FileManager::zapiszTxtHelp(ofstream& plik, Node* node) {
+    if (!node) return;
+    plik << node->data << " ";
+    zapiszTxtHelp(plik, node->left);
+    zapiszTxtHelp(plik, node->right);
+}
+
+/**
+ * @brief Zapisuje drzewo BST do pliku binarnego.
+ *
+ * @param nazwaPliku Nazwa pliku, do ktorego zapisujemy drzewo.
+ * @param root Wskaznik na korzen drzewa BST.
+ */
+void FileManager::zapiszBin(const string& nazwaPliku, Node* root) {
+    ofstream plik(nazwaPliku, ios::binary);
+    if (plik.is_open()) {
+        zapiszBinHelp(plik, root);
+        plik.close();
+        cout << "Zapisano drzewo do pliku binarnego.\n";
     }
     else {
-        cout << "Could not open binary file.\n";
+        cout << "Blad otwarcia pliku binarnego.\n";
     }
 }
 
-// Funkcja ³aduj¹ca drzewo z pliku binarnego
-void FileManager::loadFromBinaryFile(const string& filename, BST& bst) {
-    ifstream file(filename, ios::binary);
-    if (file.is_open()) {
-        int value;
-        bst.clear();  // usuwa obecne drzewo przed za³adowaniem nowego
-        while (file.read(reinterpret_cast<char*>(&value), sizeof(int))) {
-            bst.add(value); // dodaje wartoœci do drzewa
+/**
+ * @brief Wczytuje drzewo BST z pliku binarnego.
+ *
+ * Funkcja odczytuje kazda wartosc z pliku binarnego i dodaje ja do drzewa BST.
+ *
+ * @param nazwaPliku Nazwa pliku, z ktorego wczytujemy drzewo.
+ * @param bst Obiekt drzewa BST, do ktorego dodajemy wartosci.
+ */
+void FileManager::wczytajBin(const string& nazwaPliku, BST& bst) {
+    ifstream plik(nazwaPliku, ios::binary);
+    if (plik.is_open()) {
+        int wartosc;
+        bst.clear();
+        while (plik.read(reinterpret_cast<char*>(&wartosc), sizeof(int))) {
+            bst.add(wartosc);
         }
-        file.close();
-        cout << "Tree loaded from binary file.\n";
+        plik.close();
+        cout << "Wczytano drzewo z pliku binarnego.\n";
     }
     else {
-        cout << "Could not open binary file.\n";
+        cout << "Blad otwarcia pliku binarnego.\n";
     }
 }
 
-// Funkcja ³aduj¹ca drzewo z pliku tekstowego
-void FileManager::loadFromTextFile(const string& filename, BST& bst) {
-    ifstream file(filename);
-    if (file.is_open()) {
-        int value;
-        bst.clear();  // usuwa obecne drzewo przed za³adowaniem nowego
-        while (file >> value) {
-            bst.add(value); // dodaje wartoœci do drzewa
-        }
-        file.close();
-        cout << "Tree loaded from text file.\n";
+/**
+ * @brief Zapisuje drzewo BST do pliku tekstowego.
+ *
+ * @param nazwaPliku Nazwa pliku, do ktorego zapisujemy drzewo.
+ * @param root Wskaznik na korzen drzewa BST.
+ */
+void FileManager::zapiszTxt(const string& nazwaPliku, Node* root) {
+    ofstream plik(nazwaPliku);
+    if (plik.is_open()) {
+        zapiszTxtHelp(plik, root);
+        plik.close();
+        cout << "Drzewo zapisano do pliku tekstowego.\n";
     }
     else {
-        cout << "Could not open text file.\n";
+        cout << "Blad otwarcia pliku.\n";
+    }
+}
+
+/**
+ * @brief Wczytuje drzewo BST z pliku tekstowego.
+ *
+ * Funkcja odczytuje kazda wartosc z pliku tekstowego i dodaje ja do drzewa BST.
+ *
+ * @param nazwaPliku Nazwa pliku, z ktorego wczytujemy drzewo.
+ * @param bst Obiekt drzewa BST, do ktorego dodajemy wartosci.
+ */
+void FileManager::wczytajTxt(const string& nazwaPliku, BST& bst) {
+    ifstream plik(nazwaPliku);
+    if (plik.is_open()) {
+        int wartosc;
+        bst.clear();
+        while (plik >> wartosc) {
+            bst.add(wartosc);
+        }
+        plik.close();
+        cout << "Wczytano drzewo z pliku tekstowego.\n";
+    }
+    else {
+        cout << "Blad otwarcia pliku tekstowego.\n";
     }
 }

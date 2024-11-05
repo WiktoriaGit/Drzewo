@@ -62,10 +62,7 @@ int main() {
             cout << "Usunieto element.\n";
             break;
 
-        case 3:
-            bst.clear(); ///< Usuniecie wszystkich elementow z drzewa BST
-            cout << "Drzewo wyczyszczone.\n";
-            break;
+        
 
         case 4:
             cout << "Podaj wartosc do znalezienia sciezki: ";

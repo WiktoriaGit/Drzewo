@@ -75,8 +75,13 @@ void FileManager::wczytajBin(const string& nazwaPliku, BST& bst) {
         cout << "Blad otwarcia pliku binarnego.\n";
     }
 }
+
    
 /**   
+
+     
+/**
+
  * @brief Zapisuje drzewo BST do pliku tekstowego.
  *
  * @param nazwaPliku Nazwa pliku, do ktorego zapisujemy drzewo.
@@ -98,7 +103,7 @@ void FileManager::zapiszTxt(const string& nazwaPliku, Node* root) {
  * @brief Wczytuje drzewo BST z pliku tekstowego.
  *
  * Funkcja odczytuje kazda wartosc z pliku tekstowego i dodaje ja do drzewa BST.
- *
+ *   
  * @param nazwaPliku Nazwa pliku, z ktorego wczytujemy drzewo.
  * @param bst Obiekt drzewa BST, do ktorego dodajemy wartosci.
  */

@@ -76,7 +76,11 @@
               "RelativeDocumentMoniker": "FileManager.cpp",
               "ToolTip": "C:\\Users\\gagab\\Desktop\\Drzewo\\ConsoleApplication2\\FileManager.cpp",
               "RelativeToolTip": "FileManager.cpp",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAG8AAAAMAAAAAAAAAA==",
+<<<<<<< HEAD
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAE4AAAAGAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAG8AAAAMAAAAAAAAAA==",
+>>>>>>> branch2
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-04T23:05:10.024Z",
               "EditorCaption": ""

@@ -47,7 +47,6 @@ void FileManager::zapiszBin(const string& nazwaPliku, Node* root) {
         plik.close();
         cout << "Zapisano drzewo do pliku binarnego.\n";
     }
-   /*inna */
     else {
         cout << "Blad otwarcia pliku binarnego.\n";
     }
@@ -61,7 +60,7 @@ void FileManager::zapiszBin(const string& nazwaPliku, Node* root) {
  * @param nazwaPliku Nazwa pliku, z ktorego wczytujemy drzewo.
  * @param bst Obiekt drzewa BST, do ktorego dodajemy wartosci.
  */
-void FileManager::wczytajBin(const string& nazwaPliku, BST& bst) {
+//void FileManager::wczytajBin(const string& nazwaPliku, BST& bst) {
     ifstream plik(nazwaPliku, ios::binary);
     if (plik.is_open()) {
         int wartosc;

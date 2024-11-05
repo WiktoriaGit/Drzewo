@@ -75,7 +75,7 @@ void FileManager::wczytajBin(const string& nazwaPliku, BST& bst) {
         cout << "Blad otwarcia pliku binarnego.\n";
     }
 }
-   
+     
 /**
  * @brief Zapisuje drzewo BST do pliku tekstowego.
  *

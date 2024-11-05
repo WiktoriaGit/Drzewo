@@ -47,11 +47,12 @@ void FileManager::zapiszBin(const string& nazwaPliku, Node* root) {
         plik.close();
         cout << "Zapisano drzewo do pliku binarnego.\n";
     }
+   /*inna */
     else {
         cout << "Blad otwarcia pliku binarnego.\n";
     }
 }
-
+     
 /**
  * @brief Wczytuje drzewo BST z pliku binarnego.
  *

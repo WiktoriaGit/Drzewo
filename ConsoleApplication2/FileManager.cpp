@@ -98,7 +98,7 @@ void FileManager::zapiszTxt(const string& nazwaPliku, Node* root) {
  * @brief Wczytuje drzewo BST z pliku tekstowego.
  *
  * Funkcja odczytuje kazda wartosc z pliku tekstowego i dodaje ja do drzewa BST.
- *
+ *   
  * @param nazwaPliku Nazwa pliku, z ktorego wczytujemy drzewo.
  * @param bst Obiekt drzewa BST, do ktorego dodajemy wartosci.
  */

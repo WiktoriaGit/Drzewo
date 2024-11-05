@@ -77,7 +77,7 @@ void FileManager::wczytajBin(const string& nazwaPliku, BST& bst) {
 }
 
 //tescik
-
+//test kolejny
    
 /**   
 

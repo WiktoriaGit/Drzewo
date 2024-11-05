@@ -76,7 +76,7 @@ void FileManager::wczytajBin(const string& nazwaPliku, BST& bst) {
     }
 }
    
-/**
+/**   
  * @brief Zapisuje drzewo BST do pliku tekstowego.
  *
  * @param nazwaPliku Nazwa pliku, do ktorego zapisujemy drzewo.

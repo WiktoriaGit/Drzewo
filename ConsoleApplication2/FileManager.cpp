@@ -136,6 +136,6 @@ void FileManager::wczytajTxt(const string& nazwaPliku, BST& bst) {
         cout << "Wczytano drzewo z pliku tekstowego.\n";
     }
     else {
-        cout << "Blad otwarcia pliku tekstowego.\n";
+      
     }
 }

@@ -49,7 +49,7 @@ int main() {
 
         switch (wybor) {
         case 1:
-<<<<<<< HEAD
+//tekst do usuniecia
             cout << "Podaj wartosc do dodania: ";
 =======
             cout << "Podaj wartosc do mnożenia: ";

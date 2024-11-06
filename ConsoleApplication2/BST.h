@@ -23,8 +23,9 @@ public:
      *
      * @param val Wartosc przypisana do wezla.
      */
-    Node(int val);
+    Node(int val);  
 };
+
 
 /**
  * @brief Klasa reprezentujaca drzewo poszukiwan binarnych (BST).

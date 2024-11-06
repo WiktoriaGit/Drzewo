@@ -49,11 +49,7 @@ int main() {
 
         switch (wybor) {
         case 1:
-
             cout << "Podaj wartosc do dodania: ";
-
-            cout << "Podaj wartosc do mnożenia: ";
-
             cin >> wartosc;
             bst.add(wartosc); ///< Dodanie elementu o wartosci `wartosc` do drzewa BST
             cout << "Dodano element.\n";

@@ -33,11 +33,8 @@ void FileManager::zapiszTxtHelp(ofstream& plik, Node* node) {
     zapiszTxtHelp(plik, node->left);
     zapiszTxtHelp(plik, node->right);
 }
-<<<<<<< HEAD
-       
-=======
 
->>>>>>> branch3
+
 /**
  * @brief Zapisuje drzewo BST do pliku binarnego.
  *
@@ -55,11 +52,6 @@ void FileManager::zapiszBin(const string& nazwaPliku, Node* root) {
         cout << "Blad otwarcia pliku binarnego.\n";
     }
 }
-<<<<<<< HEAD
-
-=======
-     
->>>>>>> branch3
 /**
  * @brief Wczytuje drzewo BST z pliku binarnego.
  *
@@ -68,11 +60,8 @@ void FileManager::zapiszBin(const string& nazwaPliku, Node* root) {
  * @param nazwaPliku Nazwa pliku, z ktorego wczytujemy drzewo.
  * @param bst Obiekt drzewa BST, do ktorego dodajemy wartosci.
  */
-<<<<<<< HEAD
 void FileManager::wczytajBin(const string& nazwaPliku, BST& bst) {
-=======
-//void FileManager::wczytajBin(const string& nazwaPliku, BST& bst) {
->>>>>>> branch3
+    //void FileManager::wczytajBin(const string& nazwaPliku, BST& bst) {
     ifstream plik(nazwaPliku, ios::binary);
     if (plik.is_open()) {
         int wartosc;
@@ -87,12 +76,9 @@ void FileManager::wczytajBin(const string& nazwaPliku, BST& bst) {
         cout << "Blad otwarcia pliku binarnego.\n";
     }
 }
-
-<<<<<<< HEAD
 //tescik
 //test kolejny
-=======
->>>>>>> branch3
+
    
 /**   
 
@@ -136,6 +122,7 @@ void FileManager::wczytajTxt(const string& nazwaPliku, BST& bst) {
         cout << "Wczytano drzewo z pliku tekstowego.\n";
     }
     else {
-        cout << "Blad otwarcia pliku tekstowego.\n";
+        cout << "Nie uda³o siê otworzyæ pliku.\n";
+      
     }
 }

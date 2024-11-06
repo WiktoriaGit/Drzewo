@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\gagab\\Desktop\\Drzewo\\ConsoleApplication2\\",
   "Documents": [
     {
@@ -20,6 +21,28 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{B9BCDBB3-89BF-45C9-A586-9A78526B9B99}|ConsoleApplication2.vcxproj|C:\\Users\\gagab\\Desktop\\Drzewo\\ConsoleApplication2\\BST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+=======
+  "WorkspaceRootPath": "C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9BCDBB3-89BF-45C9-A586-9A78526B9B99}|ConsoleApplication2.vcxproj|C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\ConsoleApplication2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B9BCDBB3-89BF-45C9-A586-9A78526B9B99}|ConsoleApplication2.vcxproj|solutionrelative:ConsoleApplication2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9BCDBB3-89BF-45C9-A586-9A78526B9B99}|ConsoleApplication2.vcxproj|C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\FileManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B9BCDBB3-89BF-45C9-A586-9A78526B9B99}|ConsoleApplication2.vcxproj|solutionrelative:FileManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9BCDBB3-89BF-45C9-A586-9A78526B9B99}|ConsoleApplication2.vcxproj|C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B9BCDBB3-89BF-45C9-A586-9A78526B9B99}|ConsoleApplication2.vcxproj|solutionrelative:FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9BCDBB3-89BF-45C9-A586-9A78526B9B99}|ConsoleApplication2.vcxproj|C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\BST.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B9BCDBB3-89BF-45C9-A586-9A78526B9B99}|ConsoleApplication2.vcxproj|solutionrelative:BST.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9BCDBB3-89BF-45C9-A586-9A78526B9B99}|ConsoleApplication2.vcxproj|C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\BST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+>>>>>>> branchD
       "RelativeMoniker": "D:0:0:{B9BCDBB3-89BF-45C9-A586-9A78526B9B99}|ConsoleApplication2.vcxproj|solutionrelative:BST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -36,6 +59,7 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "BST.h",
+<<<<<<< HEAD
               "DocumentMoniker": "C:\\Users\\gagab\\Desktop\\Drzewo\\ConsoleApplication2\\BST.h",
               "RelativeDocumentMoniker": "BST.h",
               "ToolTip": "C:\\Users\\gagab\\Desktop\\Drzewo\\ConsoleApplication2\\BST.h",
@@ -68,10 +92,20 @@
               "ViewState": "AgIAABsAAAAAAAAAAAAAANAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-06T11:42:24.234Z"
+=======
+              "DocumentMoniker": "C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\BST.h",
+              "RelativeDocumentMoniker": "BST.h",
+              "ToolTip": "C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\BST.h",
+              "RelativeToolTip": "BST.h",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAUwJsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-06T11:25:40.624Z"
+>>>>>>> branchD
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "FileManager.cpp",
               "DocumentMoniker": "C:\\Users\\gagab\\Desktop\\Drzewo\\ConsoleApplication2\\FileManager.cpp",
               "RelativeDocumentMoniker": "FileManager.cpp",
@@ -81,11 +115,47 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-06T11:42:24.235Z",
               "EditorCaption": ""
+=======
+              "Title": "ConsoleApplication2.cpp",
+              "DocumentMoniker": "C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\ConsoleApplication2.cpp",
+              "RelativeDocumentMoniker": "ConsoleApplication2.cpp",
+              "ToolTip": "C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\ConsoleApplication2.cpp",
+              "RelativeToolTip": "ConsoleApplication2.cpp",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAF4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-06T11:25:40.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BST.cpp",
+              "DocumentMoniker": "C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\BST.cpp",
+              "RelativeDocumentMoniker": "BST.cpp",
+              "ToolTip": "C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\BST.cpp",
+              "RelativeToolTip": "BST.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAANAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-06T11:25:40.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FileManager.cpp",
+              "DocumentMoniker": "C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\FileManager.cpp",
+              "RelativeDocumentMoniker": "FileManager.cpp",
+              "ToolTip": "C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\FileManager.cpp",
+              "RelativeToolTip": "FileManager.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAE8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-06T11:25:40.919Z"
+>>>>>>> branchD
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "FileManager.h",
+<<<<<<< HEAD
               "DocumentMoniker": "C:\\Users\\gagab\\Desktop\\Drzewo\\ConsoleApplication2\\FileManager.h",
               "RelativeDocumentMoniker": "FileManager.h",
               "ToolTip": "C:\\Users\\gagab\\Desktop\\Drzewo\\ConsoleApplication2\\FileManager.h",
@@ -93,6 +163,15 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-11-06T11:42:24.236Z"
+=======
+              "DocumentMoniker": "C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\FileManager.h",
+              "RelativeDocumentMoniker": "FileManager.h",
+              "ToolTip": "C:\\Users\\wikaf\\OneDrive\\Pulpit\\Drzewo\\ConsoleApplication2\\FileManager.h",
+              "RelativeToolTip": "FileManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-06T11:25:40.919Z"
+>>>>>>> branchD
             }
           ]
         }

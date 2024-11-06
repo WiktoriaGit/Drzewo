@@ -92,7 +92,7 @@ int main() {
             break;
 
         case 8:
-            cout << "Podaj nazwe pliku do zapisu (binarny): ";
+            cout << "Podaj nazwe pliku do zapisu: ";
             cin >> nazwaPliku;
             FileManager::zapiszBin(nazwaPliku, bst.getRoot()); ///< Zapisanie drzewa BST do pliku binarnego
             break;
